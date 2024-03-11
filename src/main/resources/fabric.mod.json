@@ -1,37 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "timestop",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "TimeStop-Fabric",
+	"description": "A simple server-side mod that stops the world time from advancing if no one is currently on the server.",
 	"authors": [
-		"Me!"
+		"Pluto7073"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/pluto7073/TimeStop-Fabric",
+		"sources": "https://github.com/pluto7073/TimeStop-Fabric"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/timestop/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+			"ml.pluto7073.timestop.TimeStop"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"timestop.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
+		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
